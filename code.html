@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入名字跳转页面</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.96weixin.com/ueditor/20240730/17223432791722343279222152.jpg?imageView2/2/w/1600/q/85');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            width: 200px;
+        }
+        button {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+    </style>
+    <script>
+        function checkName() {
+            var name = document.getElementById("nameInput").value;
+            if (name === "张晓芮") {
+                window.location.href = "https://love.yuqios.com/web.php?id=MtfWgn5";
+            } else if (name === "曾梽豪") {
+                alert("输入作者的名字是不行的");
+            } else {
+                alert("你不是我要找的人");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>请输入你的名字，之后的网页是给一个人看的</h1>
+    <input type="password" id="nameInput" placeholder="请输入名字">
+    <button onclick="checkName()">提交</button>
+</body>
+</html>
